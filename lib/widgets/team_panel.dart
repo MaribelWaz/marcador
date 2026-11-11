@@ -28,6 +28,22 @@
               ),
             ),
           ),
+          Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: InkWell(
+                  onTap: alSumar,
+                  child: Container(
+                    color: colorClaro,
+                    child: const Center(
+                      child: Icon(Icons.add, size: 64, color: Colors.white),
+                  ),
+                  ),
+                ),
+                ),
+            ]
+          )
         ],
       ),
     );
