@@ -43,7 +43,28 @@ class TeamPanel extends StatelessWidget{
 
   const TeamPanel({super.key, required this.nombre, required this.colorClaro, required this.colorOscuro, required this.puntos, required this.alSumar, required this.alRestar});
   
-
+  @override
+  Widget build(BuildContext context){
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: Column(
+        children: [
+          Expanded(
+            flex: 3,
+            child: InkWell(
+              onTap: alSumar,
+              child: Container(
+                color: colorClaro,
+                child: const Center(
+                  child: Icon(Icons.add, size: 64, color: Colors.white),
+                  ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
 
 }
