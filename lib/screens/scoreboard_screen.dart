@@ -32,3 +32,18 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
   }
 
 }
+
+class TeamPanel extends StatelessWidget{
+  final String nombre;
+  final Color colorClaro;
+  final Color colorOscuro;
+  final int puntos;
+  final VoidCallback alSumar;
+  final VoidCallback alRestar;
+
+  const TeamPanel({super.key, required this.nombre, required this.colorClaro, required this.colorOscuro, required this.puntos, required this.alSumar, required this.alRestar});
+  
+
+
+
+}
