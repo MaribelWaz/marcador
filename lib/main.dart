@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'themes/app_theme.dart';
-
+import 'screens/scoreboard_screen.dart';
 
 //Punto inicial: arrancar la aplicación
 void main(){
