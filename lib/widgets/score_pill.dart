@@ -16,28 +16,54 @@ class ScorePill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Container(
+      //Separacion de todos los lados
       padding: EdgeInsets.all(10),
+      //Rectangulo contenedor del marcador
       decoration: BoxDecoration(
+        color: Color(0xFF333333),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white24),
+        border: Border.all(color: Colors.white, width: 1.5),
+        
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+
+          //Fila para el equipo local
           Row(
             children: [
-              Icon(Icons.circle,
-              size: 15, 
-              color: colorAzul),
+              //Widget de icono de circulo, color azul
+              Icon(Icons.circle, size: 15, color: colorAzul),
+              //Separacion entre el icono y el texto
               const SizedBox(width: 6),
+              //Texto del equipo local
               Text(
                 'LOCAL',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: colorAzul,
-                )
+                ),
+              ),
+            ],
+          ),
+          //Fila para el equipo visitante
+          Row(
+            children: [
+              Text(
+                'VISITA',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: colorRojo,
+                ),
+              
+              ),
+              const SizedBox(width: 6),
+              Icon(
+                Icons.circle, size: 15, color: colorRojo,
               )
             ],
           )
