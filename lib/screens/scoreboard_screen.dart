@@ -33,7 +33,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
               },
               alRestar: () {
                 setState(() {
-                  if(puntosLocal >= 0){
+                  if(puntosLocal > 0){
                     puntosLocal--;
                   }
                 });
@@ -53,7 +53,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
               },
               alRestar: () {
                 setState(() {
-                  if(puntosVisitante >= 0){
+                  if(puntosVisitante > 0){
                     puntosVisitante--;
                   }
                   
