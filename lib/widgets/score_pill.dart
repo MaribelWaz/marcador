@@ -14,19 +14,35 @@ class ScorePill extends StatelessWidget {
     required this.puntosVisita,
   });
 
-  @override 
-  Widget build(BuildContext context){
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.white24),
-        ),
-        child: Row(
-          children: [
-
-          ],
-        ),
-      );
-  } 
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.circle,
+              size: 15, 
+              color: colorAzul),
+              const SizedBox(width: 6),
+              Text(
+                'LOCAL',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: colorAzul,
+                )
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
+}
