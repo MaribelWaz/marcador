@@ -22,6 +22,22 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
+            Row(
+              children: [
+                const Icon(
+                  Icons.sports_basketball, size: 24
+                ),
+                const SizedBox(width: 10),
+               const Text(
+                  'MARCADOR',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.white
+                  ),
+                ),
+              ],
+            ),
             Expanded(
               child: Row(
                 children: [
