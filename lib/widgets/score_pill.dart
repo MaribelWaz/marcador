@@ -4,14 +4,14 @@ class ScorePill extends StatelessWidget {
   final Color colorAzul;
   final Color colorRojo;
   final int puntosLocal;
-  final int puntosVisita;
+  final int puntosVisitante;
 
   const ScorePill({
     super.key,
     required this.colorAzul,
     required this.colorRojo,
     required this.puntosLocal,
-    required this.puntosVisita,
+    required this.puntosVisitante,
   });
 
   @override
@@ -49,7 +49,44 @@ class ScorePill extends StatelessWidget {
               ),
             ],
           ),
-          //Fila para el equipo visitante
+          Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(20),
+              
+            ),
+            child: Row(
+              children: [
+                Text(
+                  '$puntosLocal',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: colorAzul,
+                  ),
+                ),
+                const SizedBox(width: 15),
+                Text(
+                  'VS',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(width: 15),
+
+                Text(
+                  '$puntosVisitante',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: colorRojo,
+                  ),
+                ),
+              ],
+            )
+          ),//Fila para el equipo visitante
           Row(
             children: [
               Text(

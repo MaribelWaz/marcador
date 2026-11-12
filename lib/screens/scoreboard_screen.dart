@@ -32,7 +32,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
             //Separación entre la cabecera y la capsula 
             const SizedBox(height: 20),
             //Pildora que indica los valores de cada equipo en el marcador
-            ScorePill(colorAzul: AppTheme.azul, colorRojo: AppTheme.rojo, puntosLocal: puntosLocal, puntosVisita: puntosVisitante),
+            ScorePill(colorAzul: AppTheme.azul, colorRojo: AppTheme.rojo, puntosLocal: puntosLocal, puntosVisitante: puntosVisitante),
             //Expandimos el contenido para que ocupe todo el alto posible
             Expanded(
               //Usamos Row para organizar los elementos en horizontal
