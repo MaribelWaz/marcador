@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marcador/widgets/scoreboard_header.dart';
 
 import '../widgets/team_panel.dart';
 import '../themes/app_theme.dart';
@@ -22,22 +23,8 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Row(
-              children: [
-                const Icon(
-                  Icons.sports_basketball, size: 24
-                ),
-                const SizedBox(width: 10),
-               const Text(
-                  'MARCADOR',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.white
-                  ),
-                ),
-              ],
-            ),
+            const ScoreboardHeader(),
+            const SizedBox(height: 20,),
             Expanded(
               child: Row(
                 children: [
