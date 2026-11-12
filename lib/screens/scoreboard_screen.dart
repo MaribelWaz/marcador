@@ -18,50 +18,62 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          Expanded(
-            child: TeamPanel(
-              nombre: 'EQUIPO LOCAL',
-              colorClaro: AppTheme.azul,
-              colorOscuro: AppTheme.azulOscuro,
-              puntos: puntosLocal,
-              alSumar: () {
-                setState(() {
-                  puntosLocal++;
-                });
-              },
-              alRestar: () {
-                setState(() {
-                  if(puntosLocal > 0){
-                    puntosLocal--;
-                  }
-                });
-              },
-            ),
-          ),
-          Expanded(
-            child: TeamPanel(
-              nombre: 'EQUIPO VISITA',
-              colorClaro: AppTheme.rojo,
-              colorOscuro: AppTheme.rojoOscuro,
-              puntos: puntosVisitante,
-              alSumar: () {
-                setState(() {
-                  puntosVisitante++;
-                });
-              },
-              alRestar: () {
-                setState(() {
-                  if(puntosVisitante > 0){
-                    puntosVisitante--;
-                  }
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                      child: TeamPanel(
+                        nombre: 'EQUIPO LOCAL',
+                        colorClaro: AppTheme.azul,
+                        colorOscuro: AppTheme.azulOscuro,
+                        puntos: puntosLocal,
+                        alSumar: () {
+                          setState(() {
+                            puntosLocal++;
+                          });
+                        },
+                        alRestar: () {
+                          setState(() {
+                            if (puntosLocal > 0) {
+                              puntosLocal--;
+                            }
+                          });
+                        },
+                      ),
+                    
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+        
+                      child: TeamPanel(
+                        nombre: 'EQUIPO VISITA',
+                        colorClaro: AppTheme.rojo,
+                        colorOscuro: AppTheme.rojoOscuro,
+                        puntos: puntosVisitante,
+                        alSumar: () {
+                          setState(() {
+                            puntosVisitante++;
+                          });
+                        },
+                        alRestar: () {
+                          setState(() {
+                            if (puntosVisitante > 0) {
+                              puntosVisitante--;
+                            }
+                          });
+                        },
+                      ),
                   
-                });
-              },
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
