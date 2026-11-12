@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
+//Panel completo de un equipo. Se reutiliza en local y visitante
+//Solamente cambian los datos que recibe desde la pantalla
 class TeamPanel extends StatelessWidget {
-  final String nombre;
-  final Color colorClaro;
-  final Color colorOscuro;
-  final int puntos;
-  final VoidCallback alSumar;
-  final VoidCallback alRestar;
+  final String nombre; //Nombre que se muestra en la parte inferior
+  final Color colorClaro; //Color de los botones de + y -
+  final Color colorOscuro; //Color para la puntuacion
+  final int puntos; //Puntuacion a mostrar
+  final VoidCallback alSumar; //Funcion de que hacer al pulsar +, se decide en la pantalla
+  final VoidCallback alRestar;//Funcion de que hacer al pulsar -, se decide en la pantalla
 
   const TeamPanel({
     super.key,
@@ -20,10 +22,13 @@ class TeamPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Recorta el panel con esquinas redondeadas
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
+      //Apila las cuatro zonas de arriba a abajo
       child: Column(
         children: [
+          //Zona 1: boton de  +  pulsable
           Expanded(
             flex: 3,
             child: InkWell(
@@ -36,7 +41,7 @@ class TeamPanel extends StatelessWidget {
               ),
             ),
           ),
-
+          //Zona 2: puntuación en grande
           Expanded(
             flex: 6,
             child: Container(
@@ -53,6 +58,8 @@ class TeamPanel extends StatelessWidget {
               ),
             ),
           ),
+
+          //Zona 3: botón de - (pulsable)
           Expanded(
             flex: 3,
             child: InkWell(
@@ -65,6 +72,7 @@ class TeamPanel extends StatelessWidget {
               ),
             ),
           ),
+          //Zona 4: franja de abajo con el nombre del equipo
           Container(
             height: 32,
             color: colorOscuro,

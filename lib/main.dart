@@ -14,9 +14,9 @@ class MarcadorApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.tema,
-      home: const ScoreboardScreen(),
+      debugShowCheckedModeBanner: false, //Oculta la etiqueta "debug"
+      theme: AppTheme.tema, //Tema oscuro definido en themes/app_theme.dart
+      home: const ScoreboardScreen(), //Pantalla que se muestra al arrancar
     );
   }
 }
