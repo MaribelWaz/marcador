@@ -19,7 +19,7 @@ class ScorePill extends StatelessWidget {
     
     return Container(
       //Separacion de todos los lados
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(15),
       //Rectangulo contenedor del marcador
       decoration: BoxDecoration(
         color: Color(0xFF333333),
@@ -50,10 +50,10 @@ class ScorePill extends StatelessWidget {
             ],
           ),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.only(right: 10, left: 10, top:2, bottom: 2),
             decoration: BoxDecoration(
               color: Colors.black,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(15),
               
             ),
             child: Row(
@@ -61,25 +61,25 @@ class ScorePill extends StatelessWidget {
                 Text(
                   '$puntosLocal',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: colorAzul,
                   ),
                 ),
-                const SizedBox(width: 15),
+                const SizedBox(width: 20),
                 Text(
                   'VS',
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 11,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(width: 15),
+                const SizedBox(width: 20),
 
                 Text(
                   '$puntosVisitante',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: colorRojo,
                   ),

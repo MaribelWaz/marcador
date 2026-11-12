@@ -30,9 +30,10 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
             //Widget que monta la cabecera de la aplicación
             const ScoreboardHeader(),
             //Separación entre la cabecera y la capsula 
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             //Pildora que indica los valores de cada equipo en el marcador
             ScorePill(colorAzul: AppTheme.azul, colorRojo: AppTheme.rojo, puntosLocal: puntosLocal, puntosVisitante: puntosVisitante),
+            const SizedBox(height: 25),
             //Expandimos el contenido para que ocupe todo el alto posible
             Expanded(
               //Usamos Row para organizar los elementos en horizontal
