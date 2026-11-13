@@ -41,6 +41,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
             ScorePill(
               colorAzul: AppTheme.azul,
               colorRojo: AppTheme.rojo,
+              colorGris: AppTheme.gris,
               puntosLocal: puntosLocal,
               puntosVisitante: puntosVisitante,
             ),
@@ -107,6 +108,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
             const SizedBox(height: 20),
             //Boton de RESET: la pantalla le pasa la función que debe ejecutar al pulsarse
             ResetButton(
+              colorGris: AppTheme.gris,
               //Invoca al metodo alReiniciar
               alReiniciar: () {
                 //Cambia el estado de las variables a 0

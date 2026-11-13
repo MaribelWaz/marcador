@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 class ResetButton extends StatelessWidget {
   //Funcion que recibe la pantalla y ejecuta al pulsar
   final VoidCallback alReiniciar;
+  final Color colorGris;
 
   //Constructor
-  const ResetButton({super.key, required this.alReiniciar});
+  const ResetButton({super.key, required this.alReiniciar, required this.colorGris});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class ResetButton extends StatelessWidget {
         
         padding: EdgeInsets.only(left: 70, right: 70, top: 20, bottom: 20),
         foregroundColor: Colors.white, //Color del icono y el texto
-        backgroundColor: Color(0xFF333333), //Color del fondo del boton
+        backgroundColor: colorGris, //Color del fondo del boton
         side: BorderSide(color: Colors.white, width: 1), //Borde color blanco del boton
         shape: RoundedRectangleBorder( 
           borderRadius: BorderRadius.circular(18), //Bordes redondeados 

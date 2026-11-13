@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ScorePill extends StatelessWidget {
   final Color colorAzul;
   final Color colorRojo;
+  final Color colorGris;
   final int puntosLocal;
   final int puntosVisitante;
 
@@ -12,6 +13,7 @@ class ScorePill extends StatelessWidget {
     super.key,
     required this.colorAzul,
     required this.colorRojo,
+    required this.colorGris,
     required this.puntosLocal,
     required this.puntosVisitante,
   });
@@ -25,7 +27,7 @@ class ScorePill extends StatelessWidget {
       padding: EdgeInsets.all(15),
       //Rectangulo contenedor del marcador
       decoration: BoxDecoration(
-        color: Color(0xFF333333),
+        color: colorGris,
         borderRadius: BorderRadius.circular(16), //Borde redondeado
         border: Border.all(color: Colors.white, width: 1.5),
         
